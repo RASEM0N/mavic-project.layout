@@ -443,4 +443,8 @@ template {
   display: none;
 }
 
+svg {
+  fill: black !important;
+}
+
 /*# sourceMappingURL=styles.css.map */
