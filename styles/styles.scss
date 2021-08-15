@@ -2,10 +2,7 @@
 @import "vars";
 @import "libs";
 @import "media";
-
-svg {
-  fill: black !important;
-}
+@import "global";
 
 body {
   font-family: "SF Display Pro", serif;

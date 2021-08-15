@@ -468,8 +468,62 @@ template {
   display: none;
 }
 
-svg {
-  fill: black !important;
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+}
+
+body {
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  color: #ffffff;
+}
+
+.page-section {
+  min-height: 100vh;
+  position: relative;
+  padding: 0 0 calc(30px + 7px + 13px);
+  background-image: url("images/background-other.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.scroll__btn {
+  padding: 13px 0 30px;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 body {
