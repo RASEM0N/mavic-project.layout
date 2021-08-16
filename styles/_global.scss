@@ -32,36 +32,78 @@ body {
   position: relative;
   overflow-x: hidden;
 
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 26px;
   color: #ffffff;
 }
 
 .page-section {
   min-height: 100vh;
   position: relative;
-  // нижний отступ + размер стрелки + верхний отступ
-  padding: 0 0 calc(30px + 7px + 13px);
 
   background-image: url("images/background-other.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    background: linear-gradient(107.54deg, rgba(23, 26, 28, 0.72) 0%, #5E5E57 100%);
+    opacity: 0.9;
+  }
+
+  &__wrapper {
+    position: relative;
+    // нижний отступ + размер стрелки + верхний отступ [padding-bottom]
+    padding: calc(30px + 30px + 14px) 0 calc(30px + 7px + 15px);
+
+    z-index: 1 !important;
+  }
 }
 
 .container {
   max-width: 1270px;
+
   padding: 0 15px;
   margin: 0 auto;
 }
 
 .title {
+  padding-left: 25px;
+  margin-bottom: 55px;
+  margin-top: calc(150px - 74px);
 
+  font-family: "SF Display Pro", sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 53px;
 }
 
 .scroll__btn {
-  padding: 13px 0 30px;
-  text-align: center;
+  padding: 0 0 30px;
   position: absolute;
+
   right: 0;
   left: 0;
   bottom: 0;
+
+  text-align: center;
+
+  a {
+    opacity: 0.64;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
