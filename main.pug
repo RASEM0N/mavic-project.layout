@@ -29,7 +29,7 @@ mixin benefitItem(num, title, text)
         .benefits__num=num
         h4.benefits__img
             img(src="images/benefits-1.png")
-        p.benefits__info
+        .benefits__info
             h4.benefits__info-title=title
             p.benefits__info-text=text
 mixin characteristicBox(title, text)
@@ -66,7 +66,7 @@ header.header
                 a.header__phone(href="tel:80505676767") 8 (050) 567 67 67
 
 // home
-section#main.page-section.top
+//section#main.page-section.top
     .page-section__wrapper
         .container
             .top__inner
@@ -89,7 +89,7 @@ section#main.page-section.top
                 include images/arrow-down.svg
 
 // что такое
-section#products.page-section.products
+//section#products.page-section.products
     .page-section__wrapper
         .container
             h3.title.products__title Что такое Mavic 2 Pro?
@@ -101,10 +101,12 @@ section#products.page-section.products
                     p.products__slider-text Лучшая беспилотная технология аэросъемки
                     .products__slider
                         +sliderItem
-                        +sliderItem
-                        +sliderItem
-                        +sliderItem
-        .scroll__btn
+                    .slider__group.products__group
+                        .slider__btn.slider__btn_position_left
+                            include images/arrow-right.svg
+                        .slider__btn.slider__btn_position_right
+                            include images/arrow-right.svg
+    .scroll__btn
             a(href="#benefits")
                 include images/arrow-down.svg
 
@@ -115,13 +117,41 @@ section#benefits.page-section.benefits
             h3.title.benefits__title Преимущества
             .benefits__inner
                 .benefits__items
-                    +benefitItem(1, "Интеллектуальные режими", "Mavic 2 унаследовал 6 стандартных режимов интеллектуальной съемки QuickShot:Roket/Dronie/Circle/Helix/Boomerang/Asteroid.")
-                    +benefitItem(2, "Active Track 2.0", "Усовершенствованный режим второго поколения распознаёт и отслеживает объекты ещё точнее, быстрее и умнее.")
-                    +benefitItem(3, "Панорамная съемка", "Mavic 2 поддерживает 4 режима панорамной съёмки: сферическая, 180 градусов, горизонтальная, вертикальная")
-                    +benefitItem(4, "Крутая камера!", "Технология Hyperlapse в четырёх режимах исполнения. Улучшенный фото режим HDR. Функция HyperLight для съёмки в условиях слабого освещения 4К съёмка")
-        .scroll__btn
-            a(href="#characteristic")
-                include images/arrow-down.svg
+                    .benefits__item
+                        .benefits__num 1
+                        h4.benefits__img
+                            img(src="images/benefits-1.png")
+                        .benefits__info
+                            h4.benefits__info-title Интеллектуальные режими
+                            p.benefits__info-text
+                                | Mavic 2 унаследовал 6 стандартных режимов интеллектуальной съемки QuickShot:Roket/Dronie/Circle/Helix/Boomerang/Asteroid.
+                    .benefits__item
+                        .benefits__num 2
+                        h4.benefits__img
+                            img(src="images/benefits-2.png")
+                        .benefits__info
+                            h4.benefits__info-title Active Track 2.0
+                            p.benefits__info-text
+                                | Усовершенствованный режим второго поколения распознаёт и отслеживает объекты ещё точнее, быстрее и умнее.
+                    .benefits__item
+                        .benefits__num 3
+                        h4.benefits__img
+                            img(src="images/benefits-3.png")
+                        .benefits__info
+                            h4.benefits__info-title Панорамная съемка
+                            p.benefits__info-text
+                                | Mavic 2 поддерживает 4 режима панорамной съёмки: сферическая, 180 градусов, горизонтальная, вертикальная
+                    .benefits__item
+                        .benefits__num 4
+                        h4.benefits__img
+                            img(src="images/benefits-4.png")
+                        .benefits__info
+                            h4.benefits__info-title Крутая камера!
+                            p.benefits__info-text
+                                | Технология Hyperlapse в четырёх режимах исполнения. Улучшенный фото режим HDR Функция HyperLight для съёмки в условиях слабого освещения 4К съёмка
+    .scroll__btn
+                a(href="#characteristic")
+                    include images/arrow-down.svg
 
 // характеристики
 section#characteristic.page-section.characteristic
