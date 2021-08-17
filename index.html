@@ -840,6 +840,144 @@ body {
   line-height: 19.5px;
 }
 
+.characteristic__inner {
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.characteristic__box {
+  position: relative;
+  min-height: 140px;
+}
+.characteristic__box + .characteristic__box {
+  margin-top: 140px;
+}
+.characteristic__info-left > .characteristic__box:nth-of-type(1)::before {
+  width: 229px;
+  height: 114px;
+  position: absolute;
+  content: "";
+  top: 17px;
+  right: -138px;
+  background-image: url("images/characterstic-1.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.characteristic__info-left > .characteristic__box:nth-of-type(2)::before {
+  width: 346px;
+  height: 80.97px;
+  position: absolute;
+  content: "";
+  top: -57px;
+  right: -271px;
+  background-image: url("images/characterstic-3.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.characteristic__info-right > .characteristic__box:nth-of-type(1)::before {
+  width: 258px;
+  height: 102.67px;
+  position: absolute;
+  content: "";
+  top: 21px;
+  left: calc(-100% - 5px);
+  background-image: url("images/characterstic-2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.characteristic__info-right > .characteristic__box:nth-of-type(2)::before {
+  width: 123.5px;
+  height: 89px;
+  position: absolute;
+  content: "";
+  top: -69px;
+  left: -131px;
+  background-image: url("images/characterstic-4.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.characteristic__box-title {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 28px;
+}
+.characteristic__box-text {
+  max-width: 281px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 19.5px;
+}
+.characteristic__img {
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: calc(50% - 25px);
+  transform: translate(-50%, -50%);
+}
+
+.questions__img {
+  display: none;
+}
+.questions__items {
+  width: 64%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+}
+.questions__item {
+  min-height: 71px;
+  max-height: 100px;
+  position: relative;
+  padding: 20px 40px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease !important;
+  opacity: 0.95;
+}
+.questions__item + .questions__item {
+  margin-top: 5px;
+}
+.questions__item-title {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 28px;
+  opacity: 0.8;
+}
+.questions__item-text {
+  position: absolute;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  opacity: 0;
+}
+.questions__item-btn {
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  transform: translateX(100%);
+}
+.questions__item-btn svg {
+  transition: all 0.3s ease;
+}
+.questions__item_activated {
+  max-height: none;
+  min-height: 210px;
+}
+.questions__item_activated .questions__item-title {
+  margin-bottom: 20px;
+}
+.questions__item_activated .questions__item-text {
+  opacity: 1;
+  transition: all 0s ease 0.1s;
+}
+.questions__item_activated .questions__item-btn svg {
+  transform: rotate(180deg);
+}
+
 /*# sourceMappingURL=styles.css.map */
 </style></head><body><!--header--><header class="header"><div class="container"><div class="header__inner"><a class="logo" href="#"><picture class="logo__img"><source srcset="images/logo-mobile.png" media="(max-width:600px)"><img src="images/logo.png" alt="logo"></picture></a><nav class="menu"><ul class="menu__list"><li class="menu__list-item"><a class="menu__list-link" href="#">О дроне</a></li><li class="menu__list-item"><a class="menu__list-link" href="#">Преимущества</a></li><li class="menu__list-item"><a class="menu__list-link" href="#">Характеристики</a></li><li class="menu__list-item"><a class="menu__list-link" href="#">Вопросы</a></li><li class="menu__list-item"><a class="menu__list-link" href="#">Контакты</a></li></ul></nav><div class="header__info"><button class="header__btn">купить</button><a class="header__phone" href="tel:80505676767">8 (050) 567 67 67</a></div></div></div></header><!-- home--><!--section#main.page-section.top.page-section__wrapper
     .container
@@ -880,17 +1018,78 @@ body {
 .scroll__btn
         a(href="#benefits")
             include images/arrow-down.svg
---><!-- преимущества--><section class="page-section benefits" id="benefits"><div class="page-section__wrapper"><div class="container"><h3 class="title benefits__title">Преимущества</h3><div class="benefits__inner"><div class="benefits__items"><div class="benefits__item"><div class="benefits__num">1</div><h4 class="benefits__img"><img src="images/benefits-1.png"></h4><div class="benefits__info"><h4 class="benefits__info-title">Интеллектуальные режими</h4><p class="benefits__info-text">Mavic 2 унаследовал 6 стандартных режимов интеллектуальной съемки QuickShot:Roket/Dronie/Circle/Helix/Boomerang/Asteroid.</p></div></div><div class="benefits__item"><div class="benefits__num">2</div><h4 class="benefits__img"><img src="images/benefits-2.png"></h4><div class="benefits__info"><h4 class="benefits__info-title">Active Track 2.0</h4><p class="benefits__info-text">Усовершенствованный режим второго поколения распознаёт и отслеживает объекты ещё точнее, быстрее и умнее.</p></div></div><div class="benefits__item"><div class="benefits__num">3</div><h4 class="benefits__img"><img src="images/benefits-3.png"></h4><div class="benefits__info"><h4 class="benefits__info-title">Панорамная съемка</h4><p class="benefits__info-text">Mavic 2 поддерживает 4 режима панорамной съёмки: сферическая, 180 градусов, горизонтальная, вертикальная</p></div></div><div class="benefits__item"><div class="benefits__num">4</div><h4 class="benefits__img"><img src="images/benefits-4.png"></h4><div class="benefits__info"><h4 class="benefits__info-title">Крутая камера!</h4><p class="benefits__info-text">Технология Hyperlapse в четырёх режимах исполнения. Улучшенный фото режим HDR Функция HyperLight для съёмки в условиях слабого освещения 4К съёмка</p></div></div></div></div></div></div><div class="scroll__btn"><a href="#characteristic"><svg width="17" height="9" viewBox="0 0 17 9" stroke="white" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g>
-        <path d="M1 1L8.5 8L16 1"/>
-    </g>
+--><!-- преимущества--><!--section#benefits.page-section.benefits.page-section__wrapper
+    .container
+        h3.title.benefits__title Преимущества
+        .benefits__inner
+            .benefits__items
+                .benefits__item
+                    .benefits__num 1
+                    h4.benefits__img
+                        img(src="images/benefits-1.png")
+                    .benefits__info
+                        h4.benefits__info-title Интеллектуальные режими
+                        p.benefits__info-text
+                            | Mavic 2 унаследовал 6 стандартных режимов интеллектуальной съемки QuickShot:Roket/Dronie/Circle/Helix/Boomerang/Asteroid.
+                .benefits__item
+                    .benefits__num 2
+                    h4.benefits__img
+                        img(src="images/benefits-2.png")
+                    .benefits__info
+                        h4.benefits__info-title Active Track 2.0
+                        p.benefits__info-text
+                            | Усовершенствованный режим второго поколения распознаёт и отслеживает объекты ещё точнее, быстрее и умнее.
+                .benefits__item
+                    .benefits__num 3
+                    h4.benefits__img
+                        img(src="images/benefits-3.png")
+                    .benefits__info
+                        h4.benefits__info-title Панорамная съемка
+                        p.benefits__info-text
+                            | Mavic 2 поддерживает 4 режима панорамной съёмки: сферическая, 180 градусов, горизонтальная, вертикальная
+                .benefits__item
+                    .benefits__num 4
+                    h4.benefits__img
+                        img(src="images/benefits-4.png")
+                    .benefits__info
+                        h4.benefits__info-title Крутая камера!
+                        p.benefits__info-text
+                            | Технология Hyperlapse в четырёх режимах исполнения. Улучшенный фото режим HDR Функция HyperLight для съёмки в условиях слабого освещения 4К съёмка
+.scroll__btn
+            a(href="#characteristic")
+                include images/arrow-down.svg
+--><!-- характеристики--><!--section#characteristic.page-section.characteristic.page-section__wrapper
+    .container
+        h3.title.characteristic__title Характеристики
+        .characteristic__inner
+            .characteristic__info.characteristic__info-left
+                +characteristicBox("Dlog-M 10 бит", "Mavic 2 Pro поддерживает цветовой профиль Dlog-M 10 бит с более широким динамическим диапазоном, дающим больше возможностей для цветокоррекции.")
+                +characteristicBox("Камера Hasselblad", "Камера Hasselblad L1D-20С известны эргономичным дизайном и превосходным качеством изображений. ")
+            .characteristic__img
+                img(src="images/mavic.png")
+            .characteristic__info.characteristic__info-right
+                +characteristicBox("Матрица CMOS 1", "Зона активной работы новой 1-дюймовой матрицы CMOS в четыре раза превышает показатели Mavic Pro")
+                +characteristicBox("Видео HDR", "Благодаря поддержке видео 4K HDR 10 бит, Mavic 2 Pro можно подсоединить к совместимому с HLG 4K ТВ и просматривать запись в полном цветовом спектре")
+    .scroll__btn
+        a(href="#questions")
+            include images/arrow-down.svg
+--><!-- вопросы 7--><section class="page-section questions" id="questions"><div class="page-section__wrapper"><div class="container"><h3 class="title questions__title">Остались вопросы?</h3><div class="questions__inner"><div class="questions__img"><img src="images/drone-questions.png"></div><div class="questions__items"><div class="questions__item"><h4 class="questions__item-title">Какие отличия между Mavic 2 Pro и Mavic 2 Zoom?</h4><p class="questions__item-text">В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).</p><button class="questions__item-btn"><svg width="20" height="13" viewBox="0 0 20 13" fill="#5E5E57" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.6013 12.7995L0.166606 1.19008C-0.0555352 0.916737 -0.0555352 0.478353 0.166606 0.205009C0.388746 -0.0683362 0.74501 -0.0683362 0.96715 0.205009L9.99948 11.3193L19.0318 0.205009C19.2539 -0.0683362 19.6102 -0.0683362 19.8323 0.205009C19.9413 0.339102 20 0.519613 20 0.694966C20 0.87032 19.9455 1.05083 19.8323 1.18492L10.3977 12.7943C10.1797 13.0677 9.81925 13.0677 9.6013 12.7995Z"
+    />
 </svg>
-</a></div></section><!-- характеристики--><section class="page-section characteristic" id="characteristic"><div class="page-section__wrapper"><div class="container"><h3 class="title characteristic__title">Характеристики</h3><div class="characteristic__inner"><div class="characteristic__info"><div class="characteristic__box"><h4 class="characteristic__box-title">Dlog-M 10 бит</h4><p class="characteristic__box-text">Mavic 2 Pro поддерживает цветовой профиль Dlog-M 10 бит с более широким динамическим диапазоном, дающим больше возможностей для цветокоррекции.</p></div><div class="characteristic__box"><h4 class="characteristic__box-title">Камера Hasselblad</h4><p class="characteristic__box-text">Камера Hasselblad L1D-20С известны эргономичным дизайном и превосходным качеством изображений. </p></div></div><div class="characteristic__img"><img src="images/mavic.png"></div><div class="characteristic__info"><div class="characteristic__box"><h4 class="characteristic__box-title">Матрица CMOS 1</h4><p class="characteristic__box-text">Зона активной работы новой 1-дюймовой матрицы CMOS в четыре раза превышает показатели Mavic Pro</p></div><div class="characteristic__box"><h4 class="characteristic__box-title">Видео HDR</h4><p class="characteristic__box-text">Благодаря поддержке видео 4K HDR 10 бит, Mavic 2 Pro можно подсоединить к совместимому с HLG 4K ТВ и просматривать запись в полном цветовом спектре</p></div></div></div></div><div class="scroll__btn"><a href="#questions"><svg width="17" height="9" viewBox="0 0 17 9" stroke="white" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g>
-        <path d="M1 1L8.5 8L16 1"/>
-    </g>
+</button></div><div class="questions__item"><h4 class="questions__item-title">Чем Mavic 2 лучше Mavic Pro?</h4><p class="questions__item-text">В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).</p><button class="questions__item-btn"><svg width="20" height="13" viewBox="0 0 20 13" fill="#5E5E57" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.6013 12.7995L0.166606 1.19008C-0.0555352 0.916737 -0.0555352 0.478353 0.166606 0.205009C0.388746 -0.0683362 0.74501 -0.0683362 0.96715 0.205009L9.99948 11.3193L19.0318 0.205009C19.2539 -0.0683362 19.6102 -0.0683362 19.8323 0.205009C19.9413 0.339102 20 0.519613 20 0.694966C20 0.87032 19.9455 1.05083 19.8323 1.18492L10.3977 12.7943C10.1797 13.0677 9.81925 13.0677 9.6013 12.7995Z"
+    />
 </svg>
-</a></div></div></section><!-- вопросы 7--><section class="page-section questions" id="questions"><div class="page-section__wrapper"><div class="container"><h3 class="title questions__title">Остались вопросы?</h3><div class="questions__inner"><div class="questions__img"><img src="images/drone-questions.png"></div><div class="questions__items"><div class="questions__item questions__item_actived"><h4 class="questions__title">Какие отличия между Mavic 2 Pro и Mavic 2 Zoom?</h4><p class="questions__text">В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).</p></div><div class="questions__item questions__item_actived"><h4 class="questions__title">Чем Mavic 2 лучше Mavic Pro?</h4><p class="questions__text">В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).</p></div><div class="questions__item questions__item_actived"><h4 class="questions__title">Можно ли подключить Mavic 2 к очкам DJI Goggles?</h4><p class="questions__text">В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).</p></div><div class="questions__item questions__item_actived"><h4 class="questions__title">Является ли Mavic 2 водонепроницаемым？</h4><p class="questions__text">В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).</p></div></div></div></div><div class="scroll__btn"><a href="#contacts"><svg width="17" height="9" viewBox="0 0 17 9" stroke="white" fill="none" xmlns="http://www.w3.org/2000/svg">
+</button></div><div class="questions__item"><h4 class="questions__item-title">Можно ли подключить Mavic 2 к очкам DJI Goggles?</h4><p class="questions__item-text">В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).</p><button class="questions__item-btn"><svg width="20" height="13" viewBox="0 0 20 13" fill="#5E5E57" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.6013 12.7995L0.166606 1.19008C-0.0555352 0.916737 -0.0555352 0.478353 0.166606 0.205009C0.388746 -0.0683362 0.74501 -0.0683362 0.96715 0.205009L9.99948 11.3193L19.0318 0.205009C19.2539 -0.0683362 19.6102 -0.0683362 19.8323 0.205009C19.9413 0.339102 20 0.519613 20 0.694966C20 0.87032 19.9455 1.05083 19.8323 1.18492L10.3977 12.7943C10.1797 13.0677 9.81925 13.0677 9.6013 12.7995Z"
+    />
+</svg>
+</button></div><div class="questions__item"><h4 class="questions__item-title">Является ли Mavic 2 водонепроницаемым？</h4><p class="questions__item-text">В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).</p><button class="questions__item-btn"><svg width="20" height="13" viewBox="0 0 20 13" fill="#5E5E57" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.6013 12.7995L0.166606 1.19008C-0.0555352 0.916737 -0.0555352 0.478353 0.166606 0.205009C0.388746 -0.0683362 0.74501 -0.0683362 0.96715 0.205009L9.99948 11.3193L19.0318 0.205009C19.2539 -0.0683362 19.6102 -0.0683362 19.8323 0.205009C19.9413 0.339102 20 0.519613 20 0.694966C20 0.87032 19.9455 1.05083 19.8323 1.18492L10.3977 12.7943C10.1797 13.0677 9.81925 13.0677 9.6013 12.7995Z"
+    />
+</svg>
+</button></div></div></div></div><div class="scroll__btn"><a href="#contacts"><svg width="17" height="9" viewBox="0 0 17 9" stroke="white" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g>
         <path d="M1 1L8.5 8L16 1"/>
     </g>
@@ -917,4 +1116,22 @@ body {
         <path d="M1 1L8.5 8L16 1"/>
     </g>
 </svg>
-</a></div></div></section><!-- футер--><footer class="footer"><div class="container"><p class="footer__copy">&copy; DJI, 2020</p></div></footer><!-- 1:47:14--></body></html>
+</a></div></div></section><!-- футер--><footer class="footer"><div class="container"><p class="footer__copy">&copy; DJI, 2020</p></div></footer><script>const questionsBtnList = document.querySelectorAll('.questions__item-btn')
+
+questionsBtnList.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        let idx = 1
+        console.log(e)
+
+        if (e.target.localName === 'svg') {
+            idx = 2
+        }
+
+        if (e.target.localName === 'path') {
+            idx = 3
+        }
+
+        const item = e.path[idx]
+        item.classList.toggle('questions__item_activated')
+    })
+})</script></body></html>

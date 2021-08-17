@@ -13,4 +13,24 @@ html(lang="ru")
     body
         include main
 
-        // 1:47:14
+        script.
+            const questionsBtnList = document.querySelectorAll('.questions__item-btn')
+
+            questionsBtnList.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    let idx = 1
+                    console.log(e)
+
+                    if (e.target.localName === 'svg') {
+                        idx = 2
+                    }
+
+                    if (e.target.localName === 'path') {
+                        idx = 3
+                    }
+
+                    const item = e.path[idx]
+                    item.classList.toggle('questions__item_activated')
+                })
+            })
+

@@ -37,9 +37,11 @@ mixin characteristicBox(title, text)
         h4.characteristic__box-title=title
         p.characteristic__box-text=text
 mixin questionItem(title, text)
-    .questions__item.questions__item_actived
-        h4.questions__title=title
-        p.questions__text=text
+    .questions__item
+        h4.questions__item-title=title
+        p.questions__item-text=text
+        button.questions__item-btn
+            include images/arrow-question.svg
 mixin contactsBox(title, phone, email)
     .contacts__info-box
         p.contacts__info-title=title
@@ -111,7 +113,7 @@ header.header
                 include images/arrow-down.svg
 
 // преимущества
-section#benefits.page-section.benefits
+//section#benefits.page-section.benefits
     .page-section__wrapper
         .container
             h3.title.benefits__title Преимущества
@@ -154,17 +156,17 @@ section#benefits.page-section.benefits
                     include images/arrow-down.svg
 
 // характеристики
-section#characteristic.page-section.characteristic
+//section#characteristic.page-section.characteristic
     .page-section__wrapper
         .container
             h3.title.characteristic__title Характеристики
             .characteristic__inner
-                .characteristic__info
+                .characteristic__info.characteristic__info-left
                     +characteristicBox("Dlog-M 10 бит", "Mavic 2 Pro поддерживает цветовой профиль Dlog-M 10 бит с более широким динамическим диапазоном, дающим больше возможностей для цветокоррекции.")
                     +characteristicBox("Камера Hasselblad", "Камера Hasselblad L1D-20С известны эргономичным дизайном и превосходным качеством изображений. ")
                 .characteristic__img
                     img(src="images/mavic.png")
-                .characteristic__info
+                .characteristic__info.characteristic__info-right
                     +characteristicBox("Матрица CMOS 1", "Зона активной работы новой 1-дюймовой матрицы CMOS в четыре раза превышает показатели Mavic Pro")
                     +characteristicBox("Видео HDR", "Благодаря поддержке видео 4K HDR 10 бит, Mavic 2 Pro можно подсоединить к совместимому с HLG 4K ТВ и просматривать запись в полном цветовом спектре")
         .scroll__btn
