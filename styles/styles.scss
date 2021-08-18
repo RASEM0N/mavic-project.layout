@@ -580,9 +580,168 @@
 //#endregion
 
 //#region SCREEN 6
+.contacts {
+  &__inner {
+    display: flex;
+    flex: 1;
+  }
+
+  &__info {
+    width: 240px;
+    margin-left: 50px;
+    margin-right: 60px;
+  }
+
+  &__info-box {
+
+    & + & {
+      margin-top: 30px;
+    }
+  }
+
+  &__info-title {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 24px;
+    margin-bottom: 13px;
+  }
+
+  &__info-phone {
+    display: block;
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 5px;
+    line-height: 19.5px;
+  }
+
+  &__info-email {
+    display: block;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 19.5px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__form {
+    width: 570px;
+    margin-right: 100px;
+
+    &-title {
+      font-weight: bold;
+      font-size: 21px;
+      line-height: 24px;
+      margin-bottom: 13px;
+    }
+
+    &-text {
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 19.5px;
+      margin-bottom: 12px;
+    }
+
+    &-line {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    &-input, &-textarea {
+      padding: 15px 15px 14px;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0.95;
+      outline: none;
+      border: none;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 19.5px;
+      color: #FFFFFF;
+    }
+
+    &-input {
+      display: block;
+      width: 100%;
+    }
+
+    &-input + &-input {
+      margin-left: 10px;
+    }
+
+    &-textarea {
+      width: 100%;
+      min-height: 144px;
+      margin-bottom: 20px;
+
+      resize: vertical;
+    }
+
+    &-btn {
+      padding: 9px 15px;
+
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+
+      cursor: pointer;
+      border: 2px solid white;
+      border-radius: 2px;
+
+      background-color: transparent;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #1C1C1C;
+        background-color: #FFFFFF;
+      }
+    }
+  }
+
+  &__social-list {
+    align-self: center;
+  }
+
+  &__social-item {
+    transition: opacity 0.3s ease;
+
+    & + & {
+      margin-top: 25px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .scroll__btn svg {
+    transform: rotate(180deg);
+  }
+
+}
+
 //#endregion
 
 //#region FOOTER
+.footer {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 32px;
+
+  &__copy {
+    text-align: right;
+    font-size: 13px;
+    line-height: 19.5px;
+
+    opacity: 0.64;
+  }
+}
+
 //#endregion
 
 @import "media";
