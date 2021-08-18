@@ -490,11 +490,14 @@
 //#region SCREEN 5
 .questions {
   &__inner {
-    //position: relative;
+    position: relative;
   }
 
   &__img {
-    display: none;
+    position: absolute;
+
+    left: calc(64% + 72px);
+    bottom: 20%;
   }
 
   &__items {

@@ -917,8 +917,13 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.questions__inner {
+  position: relative;
+}
 .questions__img {
-  display: none;
+  position: absolute;
+  left: calc(64% + 72px);
+  bottom: 20%;
 }
 .questions__items {
   width: 64%;
@@ -1117,6 +1122,27 @@ body {
     </g>
 </svg>
 </a></div></div></section><!-- футер--><footer class="footer"><div class="container"><p class="footer__copy">&copy; DJI, 2020</p></div></footer><script>const questionsBtnList = document.querySelectorAll('.questions__item-btn')
+
+function windowWidth() {
+    const element = document.createElement('div')
+    element.innerText = window.innerWidth + 'px'
+    element.style.position = "absolute"
+    element.style.top = "100px"
+    element.style.right = "20px"
+    element.style.fontWeight = 'bold'
+    element.style.padding = "5px 10px "
+    element.style.backgroundColor = "white"
+    element.style.border = "1px solid black"
+    element.style.color = '#ff3030'
+
+    document.body.append(element)
+
+    window.addEventListener('resize', () => {
+        element.innerText = window.innerWidth + 'px'
+    })
+}
+
+windowWidth()
 
 questionsBtnList.forEach(btn => {
     btn.addEventListener('click', (e) => {

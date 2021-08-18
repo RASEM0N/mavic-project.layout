@@ -917,8 +917,13 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.questions__inner {
+  position: relative;
+}
 .questions__img {
-  display: none;
+  position: absolute;
+  left: calc(64% + 72px);
+  bottom: 20%;
 }
 .questions__items {
   width: 64%;

@@ -16,6 +16,27 @@ html(lang="ru")
         script.
             const questionsBtnList = document.querySelectorAll('.questions__item-btn')
 
+            function windowWidth() {
+                const element = document.createElement('div')
+                element.innerText = window.innerWidth + 'px'
+                element.style.position = "absolute"
+                element.style.top = "100px"
+                element.style.right = "20px"
+                element.style.fontWeight = 'bold'
+                element.style.padding = "5px 10px "
+                element.style.backgroundColor = "white"
+                element.style.border = "1px solid black"
+                element.style.color = '#ff3030'
+
+                document.body.append(element)
+
+                window.addEventListener('resize', () => {
+                    element.innerText = window.innerWidth + 'px'
+                })
+            }
+
+            windowWidth()
+
             questionsBtnList.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     let idx = 1
