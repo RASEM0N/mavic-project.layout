@@ -1,11 +1,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 script.
-    new fullpage('#fullpage', {
-        autoScrolling: true,
-        scrollHorizontally: true,
-        sectionSelector: '.page-section',
-    })
+    // new fullpage('#fullpage', {
+    //     autoScrolling: true,
+    //     scrollHorizontally: true,
+    //     sectionSelector: '.page-section',
+    // })
 
     const questionsBtnList = document.querySelectorAll('.questions__item-btn')
 
@@ -15,6 +15,7 @@ script.
         element.style.position = "absolute"
         element.style.top = "100px"
         element.style.right = "20px"
+        element.style.zIndex = 11
         element.style.fontWeight = 'bold'
         element.style.padding = "5px 10px "
         element.style.backgroundColor = "white"

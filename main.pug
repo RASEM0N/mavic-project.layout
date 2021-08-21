@@ -23,7 +23,7 @@ mixin navItem(text)
         a.menu__list-link(href="#")=text
 mixin sliderItem()
     .products__slider-item
-        img.products__slider-img(src="images/slider-1.png")
+        img.products__slider-img(data-src="images/slider-1.png")
 mixin benefitItem(num, title, text)
     .benefits__item
         .benefits__num=num
@@ -57,12 +57,16 @@ header.header
                     source(srcset="images/logo-mobile.png", media="(max-width:600px)")
                     img(src="images/logo.png", alt="logo")
             nav.menu
+                button.menu__btn
+                    include images/butter.svg
                 ul.menu__list
                     +navItem("О дроне")
                     +navItem("Преимущества")
                     +navItem("Характеристики")
                     +navItem("Вопросы")
                     +navItem("Контакты")
+                    li.menu__list-phone
+                        a.header__phone(href="tel:80505676767") 8 (050) 567 67 67
             .header__info
                 button.header__btn купить
                 a.header__phone(href="tel:80505676767") 8 (050) 567 67 67
@@ -70,7 +74,7 @@ header.header
 main#fullpage
     // home
     section#main.page-section.top
-        .page-section__wrapper
+        .page-section__wrapper.top__wrapper
             .container
                 .top__inner
                     h1.top__title Mavic 2 Pro
@@ -110,8 +114,8 @@ main#fullpage
                             .slider__btn.slider__btn_position_right
                                 include images/arrow-right.svg
         .scroll__btn
-                a(href="#benefits")
-                    include images/arrow-down.svg
+            a(href="#benefits")
+                include images/arrow-down.svg
 
     // преимущества
     section#benefits.page-section.benefits
@@ -153,8 +157,8 @@ main#fullpage
                                 p.benefits__info-text
                                     | Технология Hyperlapse в четырёх режимах исполнения. Улучшенный фото режим HDR Функция HyperLight для съёмки в условиях слабого освещения 4К съёмка
         .scroll__btn
-                    a(href="#characteristic")
-                        include images/arrow-down.svg
+            a(href="#characteristic")
+                include images/arrow-down.svg
 
     // характеристики
     section#characteristic.page-section.characteristic
